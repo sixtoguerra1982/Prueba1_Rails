@@ -1,0 +1,8 @@
+<%= form_with(model: @todo, local: true) do |f| %>
+ <%= f.label :title, "Description" %>
+ <%= f.text_area :description %>
+ <%= f.label :estado, "Completed" %>
+ <%= f.check_box :completed%>
+ <%= f.submit "GRABAR" %>
+ <%= link_to 'Back', todos_path , class:'btn btn-danger' %>
+<% end %>

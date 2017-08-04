@@ -1,0 +1,15 @@
+
+  <% if @todos.any? %>
+     <% @todos.each do |todo| %>
+      <div class="well">
+        <h2> <%= todo.description %> </h2>
+        <%= todo.completed%>
+        <%= link_to 'Show', todo, class:'btn btn-primary' %>
+        <%= link_to 'Edit', edit_todo_path(todo), class:'btn btn-primary' %>
+        <%= link_to 'Destroy', todo, class:'btn btn-primary', method: :delete, data: { confirm: 'Esta Seguro de eliminar' } %>
+       </div> 
+      <% end %>
+  <% else %>
+      <h1>No existen Registros</h1>
+      <%= link_to 'Nuevo', new_todo_path %>
+  <% end %>

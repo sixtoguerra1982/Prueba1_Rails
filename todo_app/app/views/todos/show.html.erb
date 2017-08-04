@@ -1,0 +1,9 @@
+<p>
+  <strong>Contenido:</strong>
+  <%= @todo.description %>
+  <strong>Estado:</strong>
+  <%= @todo.completed %>
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo), class:'btn btn-primary' %>|
+<%= link_to 'Back', todos_path , class:'btn btn-danger' %>
