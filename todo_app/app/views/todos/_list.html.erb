@@ -7,6 +7,7 @@
         <%= link_to 'Show', todo, class:'btn btn-primary' %>
         <%= link_to 'Edit', edit_todo_path(todo), class:'btn btn-primary' %>
         <%= link_to 'Destroy', todo, class:'btn btn-primary', method: :delete, data: { confirm: 'Esta Seguro de eliminar' } %>
+        <%= link_to 'Completar', completado_path(todo), class:'btn btn-primary' %>
        </div> 
       <% end %>
   <% else %>
